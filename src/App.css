@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+div {
+  margin: 10px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 5px;
+  background: #024;
+  color: #fff;
+  border-radius: 5px;
+}
+
+form {
+  font-weight: normal;
+}
+
+body {
+  font-family: EndzoneSans, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #024
+}
+
+#finalButton {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #024;
+  color: #fff;
+}
