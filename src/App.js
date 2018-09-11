@@ -23,10 +23,8 @@ class App extends Component {
     }
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleNameClick = this.handleNameClick.bind(this);
-    this.handleNameToggle = this.handleNameToggle.bind(this);
     this.handleAgeChange = this.handleAgeChange.bind(this);
     this.handleAgeClick = this.handleAgeClick.bind(this);
-    this.handleAgeToggle = this.handleAgeToggle.bind(this);
     this.handleReasonChange = this.handleReasonChange.bind(this);
     this.handleReasonClick = this.handleReasonClick.bind(this);
     this.handleTeamsChange = this.handleTeamsChange.bind(this);
@@ -39,11 +37,7 @@ class App extends Component {
   }
 
   handleNameClick() {
-    this.setState({name: [...this.state.name, this.state.nameInput], nameInput: ""});
-  }
-
-  handleNameToggle() {
-    this.setState({toggle: !this.state.toggle});
+    this.setState({name: [...this.state.name, this.state.nameInput], nameInput: "", toggle: !this.state.toggle});
   }
 
   handleAgeChange(e) {
@@ -51,13 +45,9 @@ class App extends Component {
   }
 
   handleAgeClick() {
-    this.setState({age: [...this.state.age, this.state.ageInput], ageInput: ""});
+    this.setState({age: [...this.state.age, this.state.ageInput], ageInput: "", toggleAge: !this.state.toggleAge});
   }
 
-  handleAgeToggle() {
-    this.setState({toggleAge: !this.state.toggleAge});
-  }
-  
   handleReasonChange(e) {
     this.setState({reasonsInput: e.target.value});
   }
@@ -88,15 +78,13 @@ class App extends Component {
           name={this.state.nameInput} 
           handleName={this.handleNameClick}
           toggleVal={this.state.toggle}
-          toggleName={this.handleNameToggle}
         />
         { this.state.name }
         <Age
           age={this.state.ageInput}
           ageInput={this.handleAgeChange}
-          handleAge={this.handleAgeChange}
+          handleAge={this.handleAgeClick}
           toggle={this.state.toggleAge}
-          toggleAge={this.handleAgeToggle}
         /> 
         { this.state.age }
         <Reasons 

@@ -9,7 +9,7 @@ const Age = props => {
                     {props.toggle === false ? <input type="number" min="10" max="100" onChange={props.ageInput} placeholder="10-100" /> : <h3>{ props.age }</h3>}
                 </label>
             </form>
-            <button onClick={props.handleAge} onClick={props.toggleAge}>Submit</button>
+            <button onClick={props.handleAge}>Submit</button>
         </div>
     )
 }
